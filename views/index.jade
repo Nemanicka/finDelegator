@@ -1,5 +1,12 @@
 extends layout
 
 block content
-    div(ng-show="isUserNull()")
-        input(ng-model="name" ng-enter="setUser($name)")
+    div(layout="column")
+        div(flex="8" layout-align="center center" style="background-color:#004444; layout-padding")
+            p(style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 200%; color: #FAFAFA; margin: 0px;" align="center") Donate & Delegate
+    div(flex="70" flex-offset="5")
+        md-card(style="margin: 2px;")
+            md-card-avatar
+                img(src="/assets/org.jpg" style="height:120px;")
+
+

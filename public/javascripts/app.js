@@ -1,8 +1,9 @@
-var mainModule = angular.module('app', []);
+    var app = angular.module('app', ['ngMaterial']);
+
+
+var mainModule = angular.module('findelegator', []);
 
 mainModule.controller('mainViewController', ['$scope', function ($scope) {
-
-
 
 }]);
 
