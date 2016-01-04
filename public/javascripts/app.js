@@ -1,13 +1,13 @@
-    var app = angular.module('app', ['ngMaterial']);
+var app = angular.module('app', ['ngMaterial', 'ngMessages']);
 
 
-var mainModule = angular.module('findelegator', []);
+app.controller('mainViewController', ['$scope', function ($scope) {
 
-mainModule.controller('mainViewController', ['$scope', function ($scope) {
+    $scope.newsposts = ["one", "two", "three"];
 
 }]);
 
-mainModule.directive('ngEnter', function() {
+app.directive('ngEnter', function() {
     return function(scope, element, attrs) {
 element.bind("keydown keypress", 
     function(event) {

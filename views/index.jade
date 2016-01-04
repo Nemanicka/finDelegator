@@ -4,9 +4,60 @@ block content
     div(layout="column")
         div(flex="8" layout-align="center center" style="background-color:#004444; layout-padding")
             p(style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 200%; color: #FAFAFA; margin: 0px;" align="center") Donate & Delegate
-    div(flex="70" flex-offset="5")
-        md-card(style="margin: 2px;")
-            md-card-avatar
-                img(src="/assets/org.jpg" style="height:120px;")
-
-
+    div(layout="row")
+        div(flex="5" style="margin: 5px")
+            div(layout="column")
+                div(flex="100" style="background-color: #FFFFFF")
+        div(flex="60" style="margin: 5px; margin-left: 0px")
+            div(layout="column" style="height: 180px;")
+                md-card(style="background-image: url('/assets/org.jpg'); background-size: 100% 100%;  background-repeat: no-repeat; margin: 0px")
+                    md-card-content
+                        md-card-avatar
+                            img( src="/assets/ava.jpg" style="height: 150px; width: 150px;")
+            div(layout="row")
+                div(flex="30" style="margin:0px")
+                    h2 Smth
+                    div(layout="column")
+                        md-list
+                            md-list-item
+                                md-card(flex="100")
+                                    md-card-header
+                                        md-card-header-text
+                                            p(class="md-title") Total amount
+                                    md-card-content
+                                        121412
+                            md-list-item
+                                md-card(flex="100")
+                                    md-card-header
+                                        md-card-header-text
+                                            p(class="md-title") Delegated from
+                                    md-card-content
+                                        1 2 3 
+                            md-list-item
+                                md-card(flex="100")
+                                    md-card-header
+                                        md-card-header-text
+                                            p(class="md-title") Delegated to
+                                    md-card-content
+                                        4 5 6
+                div(flex="70" style="margin:0px")
+                    h2 News
+                    div(layout="column")
+                        md-list
+                            md-list-item(ng-repeat="post in newsposts")
+                                md-card(flex="100")
+                                    md-card-header
+                                        md-card-header-text
+                                            p(class="md-title") Post
+                                    md-card-content
+                                        {{post}}
+        div(flex="20" style="margin: 5px; margin-left: 0px;" )
+            div(layout="column")
+                div(style="height: 180px; background-color: #BCBBCF;")
+                    form(name="colorForm")
+                        h2 Donate
+                        md-input-container
+                            label(Favorite Color)
+                            input(name="favoriteColor" ng-model="favoriteColor" required)
+                            div(ng-messages="colorForm.favoriteColor.$error")
+                                div(ng-message="required")
